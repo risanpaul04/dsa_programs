@@ -1,10 +1,10 @@
 #include<stdio.h>
 
-void array_deletion(int arr[], int* size, int pos){
-    for(int i=pos-1; i<*size-1; i++){
+void array_deletion(int arr[], int size, int pos){
+    for(int i=pos-1; i<size-1; i++){
         arr[i]=arr[i+1];
     }
-    *size--;
+    
 }
 
 int main(){
@@ -29,13 +29,17 @@ int main(){
     printf("\nEnter the position of the element to be deleted: \n");
     scanf("%d", &pos);
 
-    array_deletion(arr, &size, pos);
-    
-
-    //Output after element deletion
-    printf("The array elements after deletion: \n");
-    for(int i=0; i<size; i++){
-        printf("%d  ", arr[i]);
+    if(pos<=0 || pos>size){
+        printf("Invalid position!");
+    }
+    else{
+        array_deletion(arr, size, pos);
+        size--;
+        //Output after element deletion
+        printf("The array elements after deletion: \n");
+        for(int i=0; i<size; i++){
+            printf("%d  ", arr[i]);
+        }
     }
     return 0;
 }
