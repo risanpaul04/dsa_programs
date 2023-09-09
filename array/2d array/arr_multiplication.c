@@ -1,6 +1,7 @@
 #include<stdio.h>
 
-void mat_multi(int r1, int c1, int r2, int c2, int a1[r1][c1], int a2[r2][c2], int res[r1][c2]){
+void mat_multi(int r1, int c1, int r2, int c2, int a1[r1][c1], int a2[r2][c2], int res[r1][c2])
+{
     int i, j, k;
     for(i=0; i<r1; i++){
         for(j=0; j<c2; j++){

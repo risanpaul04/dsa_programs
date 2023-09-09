@@ -1,5 +1,6 @@
 #include<stdio.h>
 
+
 void mat_sub(int row, int col, int a1[row][col], int a2[row][col], int res[row][col])
 {
     int i, j;
@@ -32,12 +33,7 @@ int main()
     scanf("%d %d", &r1, &c1);
     int a[r1][c1];
     printf("Enter the elements of A matrix: \n");
-    for(i=0; i<r1; i++){
-        for(j=0; j<c1; j++){
-            printf("A%d%d : ", i, j);
-            scanf("%d", &a[i][j]);
-        }
-    }
+    
 
     printf("Enter no. of rows & columns in B matrix: ");
     scanf("%d %d", &r2, &c2);

@@ -7,8 +7,8 @@ void create(int row, int col, int mat[row][col]){
         for(j=0; j<col; j++)
         {
             printf("el[%d][%d]: ", i+1, j+1);
-            scanf("%d", &inarr[i][j]);
-            mat[i][j] = inarr[i][j];
+            scanf("%d", &mat[i][j]);
+            // mat[i][j] = inarr[i][j];
         }
     }
 }
