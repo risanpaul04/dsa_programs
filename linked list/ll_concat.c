@@ -1,5 +1,5 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 struct node
 {
@@ -10,49 +10,59 @@ struct node
 struct node *head1, *head2, *head3, *ptr, *newnode;
 
 void create(int n, struct node **header)
-{   
+{
     int i;
-    for(i=0; i<n; i++)
+    for (i = 0; i < n; i++)
     {
         newnode = (struct node *)malloc(sizeof(struct node));
-        printf("Enter data %d: ", i+1);
+        printf("Enter data %d: ", i + 1);
         scanf("%d", &newnode->data);
-        newnode -> link = NULL;
-        if(*header==NULL)
-        {   
+        newnode->link = NULL;
+        if (*header == NULL)
+        {
             *header = ptr = newnode;
-            
         }
         else
         {
-            ptr -> link = newnode;
+            ptr->link = newnode;
             ptr = newnode;
         }
     }
 }
 
 void display(struct node *Header)
-{   
+{
     ptr = Header;
-    if(Header==NULL){
+    if (Header == NULL)
+    {
         printf("Empty list !");
     }
     else
     {
-        while(ptr!=0)
+        while (ptr != 0)
         {
             printf("[%d] -> ", ptr->data);
-            ptr = ptr -> link;
+            ptr = ptr->link;
         }
     }
     printf("END\n");
 }
 
+void concat(struct node *header1, struct node *header2)
+{
+    ptr = header1;
+    while(ptr->link != NULL)
+    {
+        ptr = ptr->link;
+    }
+    ptr ->link  = header2;
+}
+
 int main()
 {
     int i, n, m;
-    head1= NULL;
-    head2= 0;
+    head1 = NULL;
+    head2 = 0;
 
     printf("No. of elements on 1st list: ");
     scanf("%d", &n);
@@ -60,22 +70,13 @@ int main()
     printf("\n1st list: \n");
     display(head1);
 
-    printf("\n");
-    printf("No. of elements on the 2nd list: ");
+    printf("\nNo. of elements on the 2nd list: ");
     scanf("%d", &m);
     create(m, &head2);
     printf("\n2nd list: \n");
     display(head2);
 
-    //concatination logic
-
-    head3 = ptr = head1;
-    while(ptr->link!=NULL)
-    {
-        ptr = ptr -> link;
-    }
-    ptr -> link = head2;
-    // printf("\n%d\n", p->data);
+    concat(head1, head2);
     printf("\nList after concatination: \n");
     display(head1);
 
