@@ -42,10 +42,10 @@ void display(struct node *header)
     printf("END");
 }
 
-void reverse()
+void reverse(struct node **header)
 {
     struct node *q, *r, *s;
-    q = head;
+    q = *header;
     r = q;
     s = NULL;
     while(q!=NULL)
@@ -55,7 +55,7 @@ void reverse()
         r -> link = s;
         s = r;
     }
-    head = r;
+    *header = r;
 }
 
 int main()
@@ -68,7 +68,7 @@ int main()
 
     display(head);
 
-    reverse();
+    reverse(&head);
     printf("\nThe reversed list: \n");
     display(head);
     return 0;

@@ -64,6 +64,18 @@ void display(struct node *header)
     }
 }
 
+int count(struct node *header)
+{
+    int count = 0;
+    ptr = header;
+    while(ptr!=NULL)
+    {
+        count++;
+        ptr = ptr -> link;
+    }
+    return count;
+}
+
 void concat(struct node *Head1, struct node *Head2)
 {
     ptr = Head1;
@@ -72,4 +84,20 @@ void concat(struct node *Head1, struct node *Head2)
         ptr = ptr->link;
     }
     ptr ->link = Head2;
+}
+
+void reverse(struct node **header)
+{
+    struct node *q, *r, *s;
+    q = *header;
+    s = NULL;
+    r = q;
+    while(q!=NULL)
+    {
+        r = q;
+        q = q->link;
+        r -> link = s;
+        s = r;
+    }
+    *header = r;
 }
