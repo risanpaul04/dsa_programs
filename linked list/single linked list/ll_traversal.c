@@ -6,13 +6,42 @@ struct node{
     struct node *link;
 };
 
+struct node *head, *ptr, *newnode;
+
+void create(int n)
+{
+    int i;
+    for(i=0; i<n; i++)
+    {
+        newnode = (struct node *)malloc(sizeof(struct node));
+        printf("enter element %d: ", i+1);
+        scanf("%d", &newnode->data);
+        newnode->link = 0;
+
+        if(head==0)
+        {
+            head = ptr = newnode;
+        }
+        else
+        {
+            ptr->link = newnode;
+            ptr = newnode;
+        }
+    }
+}
+
 int main()
 {
-    struct node *head, *ptr;
+    int n;
+    printf("No. of elements: ");
+    scanf("%d", &n);
+    create(n);  //calling the create func
+
     head = 0;
 
+
+    //Traversal logic
     ptr = head;
-    
     if(ptr==0)
     {
         printf("Empty list !");

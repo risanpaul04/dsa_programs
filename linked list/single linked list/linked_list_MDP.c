@@ -1,3 +1,5 @@
+//work in progress
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -9,7 +11,7 @@ struct node
 
 struct node *head, *head1, *head2, *ptr, *newnode;
 
-void create(int, struct node **);
+void create(int n, struct node **header);
 void display(struct node*);
 int count();
 
@@ -19,9 +21,67 @@ void reverse();
 
 int main()
 {
-    int i, n, m, choice = 1, flag = 0;
+    int n;
+    int flag = 1;
+    int choice;
+    printf("\n\n\t\tSingle Linked List\n");
 
-    return 0;
+    printf("\n\tCreate a list: \n");
+    printf("No. of elements on the list: ");
+    scanf("%d", &n);
+    create(n, &head1);
+
+    //Choices
+    while(flag){
+        printf("Choose any operation from the list below: \n");
+        printf("\n1. List traversal");
+        printf("\n2. List element search");
+        printf("\n3. List element insertion");
+        printf("\n4. List element deletion");
+        printf("\n5. List reversal");
+        printf("\n6. List marge");
+        printf("\n7. List concatination");
+        printf("\n8. Exit !\n\n");
+        printf("Your choice:  ");
+        scanf("%d", &choice);
+
+        switch(choice){
+            case 1:
+                // list_traversal;
+                display(head1);
+                break;
+            case 2:
+                // list_element_search;
+                break;
+            case 3:
+                // list_insertion();
+                break;
+            case 4:
+                // list_deletion();
+                break;
+            case 5:
+                // list_reversal
+                reverse(&head1);
+                break;
+            case 6:
+                // list marge
+                break;
+            case 7:
+                //list concatination
+                break;
+            case 8:
+                printf("Exiting Program.\nHappy Coding !");
+                flag = 0;
+                break;
+            default:
+                printf("> Invalid input. Choose any number from the Menu...");
+                break;
+        }
+        printf("\n");
+    }
+    
+
+    return 0;    
 }
 
 void create(int n, struct node **header)
