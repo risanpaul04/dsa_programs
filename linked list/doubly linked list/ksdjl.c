@@ -13,21 +13,22 @@ struct node *head, *tail, *ptr, *newnode;
 void createDLL(int n)
 {
     int i;
-    head = 0;
-    for(i= 0; i<n; i++)
+    head =0;
+    for(i=0; i<n; i++)
     {
         newnode = (struct node *)malloc(sizeof(struct node));
-        newnode->next = NULL;
-        newnode -> prev = NULL;
         printf("Enter data %d: ", i+1);
         scanf("%d", &newnode->data);
+        newnode->next = NULL;
+        newnode ->prev = NULL;
         if(head==0)
         {
             head = tail = newnode;
         }
-        else{
+        else
+        {
             tail -> next = newnode;
-            newnode->prev = tail;
+            newnode -> prev = tail;
             tail = newnode;
         }
     }
@@ -53,16 +54,18 @@ void display(struct node *header)
 
 void insert_at_end()
 {
-    newnode = (struct node *)malloc(sizeof(struct node));
+    newnode = (struct node*)malloc(sizeof(struct node));
     printf("Enter data: ");
     scanf("%d", &newnode->data);
-    tail -> next = newnode;
-    newnode -> prev = tail;
+    newnode->next = NULL;
+    newnode ->prev = tail;
+    tail->next = newnode;
     tail = newnode;
 }
 
 int main()
-{   int n;
+{
+    int n;
     printf("No. of elements: ");
     scanf("%d", &n);
 
@@ -71,6 +74,6 @@ int main()
 
     insert_at_end();
     display(head);
-
-    return 0;
+    
+    return  0;
 }

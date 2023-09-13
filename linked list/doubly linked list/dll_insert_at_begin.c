@@ -57,8 +57,6 @@ void insert_at_begin()
     printf("Enter data: ");
     scanf("%d", &newnode->data);
     newnode -> prev = NULL;
-    newnode -> next = NULL;
-    head ->prev = newnode;
     newnode -> next = head;
     head = newnode;
 }

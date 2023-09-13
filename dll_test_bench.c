@@ -56,12 +56,40 @@ void display(struct node *header)
     }
 }
 
+int countnode()
+{
+    int count = 0;
+    ptr = head;
+
+    while(ptr != NULL)
+    {
+        count++;
+        ptr = ptr -> next;
+    }
+    return count;
+}
+
+void insert_at_begin()
+{
+    newnode = (struct node *)malloc(sizeof(struct node));
+    printf("Enter data: ");
+    scanf("%d", &newnode->data);
+    newnode -> prev = NULL;
+    newnode -> next = head;
+    head = newnode;
+}
+
+void insert_at_end()
+{
+    newnode = (struct node *)malloc(sizeof(struct node));
+    printf("Enter data: ");
+    scanf("%d", &newnode->data);
+    tail -> next = newnode;
+    newnode -> prev = tail;
+    tail = newnode;
+}
+
 int main()
 {
-    int n;
-    printf("no. of elements on the list: ");
-    scanf("%d", &n);
-    create(n, &head);
-    display(head);
     return 0;
 }

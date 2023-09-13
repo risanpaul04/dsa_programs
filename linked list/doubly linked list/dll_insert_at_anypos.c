@@ -8,68 +8,118 @@ struct node
     struct node *prev;
 };
 
-struct node *head, *tail, *ptr, *newnode;
+struct node *head, *ptr, *newnode;
 
-void createDLL(int n)
+void create(int n, struct node **header)
 {
     int i;
-    head = 0;
-    for(i= 0; i<n; i++)
+    for(i=0; i<n; i++)
     {
         newnode = (struct node *)malloc(sizeof(struct node));
-        newnode->next = NULL;
-        newnode -> prev = NULL;
-        printf("Enter data: ");
+        printf("Enter data %d: ", i+1);
         scanf("%d", &newnode->data);
-        if(head==0)
+        newnode ->next = NULL;
+        newnode -> prev = NULL;
+
+        if (*header==NULL)
         {
-            head = tail = newnode;
+            *header = newnode;
+            ptr = newnode;
         }
-        else{
-            tail -> next = newnode;
-            newnode->prev = tail;
-            tail = newnode;
+        else
+        {
+            ptr -> next = newnode;
+            newnode -> prev = ptr;
+            ptr = newnode;
         }
+        
     }
 }
 
-void display(struct node *header)
-{
+void display(struct node *header){
     ptr = header;
-    if (header == NULL)
+    if(ptr == NULL)
     {
         printf("List empty !");
     }
     else
     {
-        while (ptr != NULL)
+        while(ptr != NULL)
         {
             printf("[%d] -> ", ptr->data);
-            ptr = ptr->next;
+            ptr = ptr -> next;
         }
-        printf("END\n");
+        printf("END!");
     }
 }
 
-void insert_at_anypos()
+int countnode()
+{
+    int count = 0;
+    ptr = head;
+
+    while(ptr != NULL)
+    {
+        count++;
+        ptr = ptr -> next;
+    }
+    return count;
+}
+
+void insert_at_begin()
 {
     newnode = (struct node *)malloc(sizeof(struct node));
     printf("Enter data: ");
     scanf("%d", &newnode->data);
     newnode -> prev = NULL;
-    newnode -> next = NULL;
-    
+    newnode -> next = head;
+    head = newnode;
+}
+
+void insert_at_anypos(int pos)
+{
+    int i = 1;
+    ptr = head;
+    newnode = (struct node *)malloc(sizeof(struct node));
+    printf("Enter data: ");
+    scanf("%d", &newnode->data);
+    while(i<pos-1)
+    {
+        ptr = ptr -> next;
+            i++;
+    }
+    newnode -> prev = ptr;
+    newnode -> next = ptr -> next;
+    ptr -> next = newnode;
 }
 
 int main()
-{   int n;
-    printf("No. of elements: ");
+{
+    int i = 1;
+    int n, pos;
+    printf("no. of elements on the list: ");
     scanf("%d", &n);
-
-    createDLL(n);
+    create(n, &head);
     display(head);
 
-    insert_at_anypos();
+    printf("\nEnter position of the data to be inserted: ");
+    scanf("%d", &pos);
+
+    int len = countnode();
+
+    if(pos<1 || pos>len+1)
+    {
+        printf("Invalid position!");
+    }
+    else if (pos==1)
+    {
+        insert_at_begin();
+    }
+    else
+    {
+        insert_at_anypos(pos);   
+    }
+
     display(head);
 
     return 0;
