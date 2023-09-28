@@ -8,7 +8,7 @@
 ## Table of contants up to date
 - ### [Array](https://github.com/risanpaul04/dsa_programs/tree/main/array)
     - #### [1d array](https://github.com/risanpaul04/dsa_programs/tree/main/array/1d%20array)
-      - [1d array menu driven program](..\1d array\1d_array.c)
+      - [1d array menu driven program](..\1d_array.c)
       - array reversal
       - array deletion 
     - #### [2d array](https://github.com/risanpaul04/dsa_programs/tree/main/array/2d%20array)
