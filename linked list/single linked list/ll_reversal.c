@@ -42,20 +42,20 @@ void display(struct node *header)
     printf("END");
 }
 
-void reverse(struct node **header)
+void reverseLL()
 {
-    struct node *q, *r, *s;
-    q = *header;
-    r = q;
-    s = NULL;
-    while(q!=NULL)
+    struct node *current, *nextnode, *prevnode;
+    current = nextnode = head;
+    prevnode = NULL;
+
+    while(nextnode!=NULL)
     {
-        r = q;
-        q = q -> link;
-        r -> link = s;
-        s = r;
+        nextnode = nextnode->link;
+        current->link = prevnode;
+        prevnode = current;
+        current = nextnode;
     }
-    *header = r;
+    head = prevnode;
 }
 
 int main()
@@ -65,10 +65,10 @@ int main()
     scanf("%d", &n);
 
     create(n);
-
+    printf("The given list:\n");
     display(head);
 
-    reverse(&head);
+    reverseLL();
     printf("\nThe reversed list: \n");
     display(head);
     return 0;

@@ -8,7 +8,7 @@ struct node
     struct node *prev;
 };
 
-struct node *head, *temp, *ptr, *newnode;
+struct node *head, *temp, *newnode;
 
 void create()
 {
@@ -32,17 +32,17 @@ void create()
 
 void display(struct node *header)
 {
-    ptr = header;
+    temp = header;
     if (header == NULL)
     {
         printf("List empty !");
     }
     else
     {
-        while (ptr != NULL)
+        while (temp != NULL)
         {
-            printf("[%d] -> ", ptr->data);
-            ptr = ptr->next;
+            printf("[%d] -> ", temp->data);
+            temp = temp->next;
         }
         printf("END\n");
     }
@@ -56,6 +56,7 @@ int main(){
         printf("\npress 1 to continue\npress 0 to exit\n");
         scanf("%d", &flag);
     }
+    printf("\nThe given list:\n");
     display(head);
     
     return 0;

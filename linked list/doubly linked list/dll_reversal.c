@@ -1,5 +1,3 @@
-//Program for writing, testing & fixing new algos
-
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -56,39 +54,6 @@ void display(struct node *header)
     }
 }
 
-int countNode()
-{
-    int count = 0;
-    ptr = head;
-
-    while(ptr != NULL)
-    {
-        count++;
-        ptr = ptr -> next;
-    }
-    return count;
-}
-
-void insert_at_begin()
-{
-    newnode = (struct node *)malloc(sizeof(struct node));
-    printf("Enter data: ");
-    scanf("%d", &newnode->data);
-    newnode -> prev = NULL;
-    newnode -> next = head;
-    head = newnode;
-}
-
-void insert_at_end()
-{
-    newnode = (struct node *)malloc(sizeof(struct node));
-    printf("Enter data: ");
-    scanf("%d", &newnode->data);
-    tail -> next = newnode;
-    newnode -> prev = tail;
-    tail = newnode;
-}
-
 void reverseDLL()
 {
     struct node *current = head;
@@ -115,6 +80,17 @@ int main()
 
     create(n, &head);
     printf("The given list:\n");
+    display(head);
+    printf("\nbefore reversal:");
+    printf("\nhead data: %d", head->data);
+    printf("\ntail data: %d", tail->data);
+
+    reverseDLL();
+    printf("\n\nAfter reversal:");
+    printf("\nhead data: %d", head->data);
+    printf("\ntail data: %d", tail->data);
+
+    printf("\n\nThe list after reversing:\n");
     display(head);
 
     return 0;
