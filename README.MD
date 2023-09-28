@@ -6,9 +6,3 @@
 - All the optimised version of the codes will also be kept here.
 
 ## Table of contants up to date
-
-:::note
-
-Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
-
-:::
