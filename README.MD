@@ -7,3 +7,8 @@
 
 ## Table of contants up to date
 
+:::note
+
+Some **content** with _Markdown_ `syntax`. Check [this `api`](#).
+
+:::
