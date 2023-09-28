@@ -21,7 +21,7 @@ void reverse();
 
 int main()
 {
-    int n;
+    int n, m;
     int flag = 1;
     int choice;
     printf("\n\n\t\tSingle Linked List\n");
@@ -29,7 +29,7 @@ int main()
     printf("\n\tCreate a list: \n");
     printf("No. of elements on the list: ");
     scanf("%d", &n);
-    create(n, &head1);
+    create(n, &head);
 
     //Choices
     while(flag){
@@ -48,7 +48,7 @@ int main()
         switch(choice){
             case 1:
                 // list_traversal;
-                display(head1);
+                display(head);
                 break;
             case 2:
                 // list_element_search;
@@ -61,13 +61,22 @@ int main()
                 break;
             case 5:
                 // list_reversal
-                reverse(&head1);
+                reverse(&head);
+                printf("List after reversal: \n");
+                display(head);
                 break;
             case 6:
                 // list marge
                 break;
             case 7:
                 //list concatination
+                printf("\nNo. of elements in the 2nd list: ");
+                scanf("%d", m);
+                create(m, &head2);
+
+                concat(head, head2);
+                printf("\nList after concatination: \n");
+                display(head);
                 break;
             case 8:
                 printf("Exiting Program.\nHappy Coding !");
@@ -124,7 +133,7 @@ void display(struct node *header)
     }
 }
 
-int count(struct node *header)
+int countnode(struct node *header)
 {
     int count = 0;
     ptr = header;
