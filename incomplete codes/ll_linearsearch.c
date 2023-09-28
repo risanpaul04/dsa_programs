@@ -50,6 +50,11 @@ void display()
     }
 }
 
+void llsearch()
+{
+    
+}
+
 int main()
 {
     int n, pos, key;
