@@ -6,6 +6,11 @@
 - All the optimised version of the codes will also be kept here.
 ---
 ## Table of contants
+  - [Array](#array)
+  - [Linked list](#linked-list)
+  - [Stack](#stacks)
+
+## Links to the programs
 - ### Array
     - #### 1d array
       - [1d array menu driven program](/array/1d-array/1d_array.c)
@@ -13,7 +18,7 @@
       - [array merge](./array/1d-array/array_merge.c)
       - [bubble sort](./array/1d-array/bubble_sort_array.c)
       --- 
-    - #### [2d array](./array/2d-array/)
+    - #### 2d array
       - [2d array menu driven program](./array/2d-array/2d_array.c)
       - [matrix multiplication](./array/2d-array/arr_multiplication.c)
       - [Matrix addition](./array/2d-array/mat_add.c)
@@ -21,8 +26,8 @@
       - [2d array create](./array/2d-array/mat_create.c)
 
     ---
-- ### [Linked list](./linked%20list)
-    - #### [Single linked list]()
+- ### Linked list
+    - #### Single linked list
       - [single linked list (Menu driven)](./linked%20list/single%20linked%20list/linked_list_MDP.c)
       - [Create linked list](./linked%20list/single%20linked%20list/ll_createusingfor.c)
       - [insert at begining](./linked%20list/single%20linked%20list/insert_at_begin.c)
@@ -32,9 +37,15 @@
       - [Concatinate 2 lists](./linked%20list/single%20linked%20list/ll_concat.c)
       - [merge 2 lists](./linked%20list/single%20linked%20list/ll_merge.c)
       --- 
-    - #### [Doubly linked list]()
+    - #### Doubly linked list
         --- 
-    - #### [Circular linked list](./linked%20list/circular%20linked%20list)
+    - #### Circular linked list
+      - [Create circular linked list](./linked%20list/circular%20linked%20list/createCLL.c)
+      - [Create circular linked list using tail](./linked%20list/circular%20linked%20list/createCLL_using_tail.c)
+      - [Insert at the beginning](./linked%20list/circular%20linked%20list/CLL_insert_at_begin.c)
+      - [Insert at the end](./linked%20list/circular%20linked%20list/CLL_insert_at_end.c)
+      - [Insert at any position](./linked%20list/circular%20linked%20list/CLL_insert_at_anyPos.c)
+  ---
 - ### Stacks
-  - [Create stack using array](./stack/create_stack.c)
-  - [Create stack using linked list](./stack/create_stack2.c)
+  - [Implement stack using array](./stack/create_stack.c)
+  - [Implement stack using linked list](./stack/create_stack2.c)
