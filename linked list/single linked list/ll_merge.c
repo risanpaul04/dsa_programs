@@ -12,6 +12,7 @@ struct node *head1, *head2, *head3, *ptr, *ptr1, *ptr2, *ptr3, *newnode;
 void create(int n, struct node **header)
 {
     int i;
+    *header = NULL;
     for (i = 0; i < n; i++)
     {
         newnode = (struct node *)malloc(sizeof(struct node));
@@ -49,9 +50,57 @@ void display(struct node *header)
     }
 }
 
+struct node* merge(struct node* head1, struct node* head2) {
+    struct node* head3 = NULL;
+    struct node* ptr1 = head1;
+    struct node* ptr2 = head2;
+    struct node* ptr3 = NULL;
+    struct node* newnode = NULL;
+
+    while (ptr1 != NULL && ptr2 != NULL) {
+        newnode = (struct node*)malloc(sizeof(struct node));
+        if (ptr1->data < ptr2->data) {
+            newnode->data = ptr1->data;
+            ptr1 = ptr1->link;
+        } else {
+            newnode->data = ptr2->data;
+            ptr2 = ptr2->link;
+        }
+        newnode->link = NULL;
+        if (head3 == NULL) {
+            head3 = newnode;
+            ptr3 = newnode;
+        } else {
+            ptr3->link = newnode;
+            ptr3 = newnode;
+        }
+    }
+
+    while (ptr1 != NULL) {
+        newnode = (struct node*)malloc(sizeof(struct node));
+        newnode->data = ptr1->data;
+        newnode->link = NULL;
+        ptr3->link = newnode;
+        ptr3 = newnode;
+        ptr1 = ptr1->link;
+    }
+
+    while (ptr2 != NULL) {
+        newnode = (struct node*)malloc(sizeof(struct node));
+        newnode->data = ptr2->data;
+        newnode->link = NULL;
+        ptr3->link = newnode;
+        ptr3 = newnode;
+        ptr2 = ptr2->link;
+    }
+
+    return head3;
+}
+
 int main()
 {
     int n, m;
+    head1 = head2 = head3 = NULL;
     printf("No. of elements in the 1st list: ");
     scanf("%d", &n);
     create(n, &head1);
@@ -62,63 +111,10 @@ int main()
 
     display(head1);
     display(head2);
-    display(head3);
 
-    ptr1 = head1;
-    ptr2 = head2;
-    ptr3 = head3;
+    head3 = merge(head1, head2);
 
-    while(ptr1!=NULL && ptr2 != NULL)
-    {   
-        // newnode = (struct node *)malloc(sizeof(struct node));
-
-        if(ptr1->data < ptr2->data)
-        {
-            // newnode -> data = ptr1 -> data;
-            // newnode -> link = NULL;
-            ptr3 -> link = ptr1;
-            ptr1 = ptr1->link;
-        }
-        else if(ptr1->data == ptr2->data)
-        {
-            newnode -> data = ptr1 -> data;
-            newnode -> link = NULL;
-            ptr3 -> link = newnode;
-            ptr3 = newnode;
-            ptr1 = ptr1->link;
-            ptr2 = ptr2->link;
-        }
-        else
-        {
-            newnode -> data = ptr2 -> data;
-            newnode -> link = NULL;
-            ptr3 -> link = newnode;
-            ptr3 = newnode;
-            ptr2 = ptr2->link;
-        }
-    }
-
-    while(ptr1!=NULL)
-    {
-        newnode = (struct node *)malloc(sizeof(struct node));
-        newnode -> data = ptr1 -> data;
-        newnode -> link = NULL;
-        ptr3 -> link = newnode;
-        ptr3 = newnode;
-        ptr1 = ptr1->link;
-    }
-
-    while(ptr2!=NULL)
-    {
-        newnode = (struct node *)malloc(sizeof(struct node));
-        newnode -> data = ptr2 -> data;
-        newnode -> link = NULL;
-        ptr3 -> link = newnode;
-        ptr3 = newnode;
-        ptr2 = ptr2->link;
-    }
-
-    printf("HEllo");
+    printf("List after merge:\n");
     display(head3);
 
     return 0;
