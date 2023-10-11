@@ -38,6 +38,7 @@
       - [merge 2 lists](./linked%20list/single%20linked%20list/ll_merge.c)
       --- 
     - #### Doubly linked list
+      - [doubly linked list (Menu driven)](./2.linked%20list/2.doubly%20linked%20list/dll_MDP.c)
       - [Create doubly linked list](./2.linked%20list/2.doubly%20linked%20list/dll_create.c)
       - [Insert at the Beginning](./2.linked%20list/2.doubly%20linked%20list/dll_insert_at_end.c)
       - [Insert at the end](./2.linked%20list/2.doubly%20linked%20list/dll_insert_at_end.c)
