@@ -38,7 +38,16 @@
       - [merge 2 lists](./linked%20list/single%20linked%20list/ll_merge.c)
       --- 
     - #### Doubly linked list
-        --- 
+      - [Create doubly linked list](./2.linked%20list/2.doubly%20linked%20list/dll_create.c)
+      - [Insert at the Beginning](./2.linked%20list/2.doubly%20linked%20list/dll_insert_at_end.c)
+      - [Insert at the end](./2.linked%20list/2.doubly%20linked%20list/dll_insert_at_end.c)
+      - [Insert at any position](./2.linked%20list/2.doubly%20linked%20list/dll_insert_at_anypos.c)
+      - [Delete from beginning](./2.linked%20list/2.doubly%20linked%20list/dll_del_from_begin.c)
+      - [Delete from the end](./2.linked%20list/2.doubly%20linked%20list/dll_del_from_end.c)
+      - [Delete from any position](./2.linked%20list/2.doubly%20linked%20list/dll_del_from_anyPos.c)
+      - [reversal of doubly linked list](./2.linked%20list/2.doubly%20linked%20list/dll_reversal.c)
+  
+      --- 
     - #### Circular linked list
       - [Create circular linked list](./linked%20list/circular%20linked%20list/createCLL.c)
       - [Create circular linked list using tail](./linked%20list/circular%20linked%20list/createCLL_using_tail.c)

@@ -1,5 +1,3 @@
-// work in progress
-
 #include <stdio.h>
 #include <stdlib.h>
 
