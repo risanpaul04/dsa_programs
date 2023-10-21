@@ -13,29 +13,29 @@
 ## Links to the programs
 - ### Array
     - #### 1d array
-      - [1d array menu driven program](/array/1d-array/1d_array.c)
-      - [array reversal](./array/1d-array/array_reversal.c)
-      - [array merge](./array/1d-array/array_merge.c)
-      - [bubble sort](./array/1d-array/bubble_sort_array.c)
+      - [1d array menu driven program](/1.array/1d-array/1d_array.c)
+      - [array reversal](./1.array/1d-array/array_reversal.c)
+      - [array merge](./1.array/1d-array/array_merge.c)
+      - [bubble sort](./1.array/1d-array/bubble_sort_array.c)
       --- 
     - #### 2d array
-      - [2d array menu driven program](./array/2d-array/2d_array.c)
-      - [matrix multiplication](./array/2d-array/arr_multiplication.c)
-      - [Matrix addition](./array/2d-array/mat_add.c)
-      - [matrix subtraction](./array/2d-array/mat_sub.c)
-      - [2d array create](./array/2d-array/mat_create.c)
+      - [2d array menu driven program](./1.array/2d-array/2d_array.c)
+      - [matrix multiplication](./1.array/2d-array/arr_multiplication.c)
+      - [Matrix addition](./1.array/2d-array/mat_add.c)
+      - [matrix subtraction](./1.array/2d-array/mat_sub.c)
+      - [2d array create](./1.array/2d-array/mat_create.c)
 
     ---
 - ### Linked list
     - #### Single linked list
-      - [single linked list (Menu driven)](./linked%20list/single%20linked%20list/linked_list_MDP.c)
-      - [Create linked list](./linked%20list/single%20linked%20list/ll_createusingfor.c)
-      - [insert at begining](./linked%20list/single%20linked%20list/insert_at_begin.c)
-      - [insert at end](./linked%20list/single%20linked%20list/insert_at_end.c)
-      - [insert at any position](./linked%20list/single%20linked%20list/insert_at_any_pos.c)
-      - [delete from begining](./linked%20list/single%20linked%20list)
-      - [Concatinate 2 lists](./linked%20list/single%20linked%20list/ll_concat.c)
-      - [merge 2 lists](./linked%20list/single%20linked%20list/ll_merge.c)
+      - [single linked list (Menu driven)](./2.linked%20list/1.single%20linked%20list/linked_list_MDP.c)
+      - [Create linked list](./2.linked%20list/1.single%20linked%20list/ll_createusingfor.c)
+      - [insert at begining](./2.linked%20list/1.single%20linked%20list/insert_at_begin.c)
+      - [insert at end](./2.linked%20list/1.single%20linked%20list/insert_at_end.c)
+      - [insert at any position](./2.linked%20list/1.single%20linked%20list/insert_at_any_pos.c)
+      - delete from begining
+      - [Concatinate 2 lists](./2.linked%20list/1.single%20linked%20list/ll_concat.c)
+      - [merge 2 lists](./2.linked%20list/1.single%20linked%20list/ll_merge.c)
       --- 
     - #### Doubly linked list
       - [doubly linked list (Menu driven)](./2.linked%20list/2.doubly%20linked%20list/dll_MDP.c)
@@ -50,12 +50,12 @@
   
       --- 
     - #### Circular linked list
-      - [Create circular linked list](./linked%20list/circular%20linked%20list/createCLL.c)
-      - [Create circular linked list using tail](./linked%20list/circular%20linked%20list/createCLL_using_tail.c)
-      - [Insert at the beginning](./linked%20list/circular%20linked%20list/CLL_insert_at_begin.c)
-      - [Insert at the end](./linked%20list/circular%20linked%20list/CLL_insert_at_end.c)
-      - [Insert at any position](./linked%20list/circular%20linked%20list/CLL_insert_at_anyPos.c)
+      - [Create circular linked list](./2.linked%20list/3.circular%20linked%20list/createCLL.c)
+      - [Create circular linked list using tail](./2.linked%20list/3.circular%20linked%20list/createCLL_using_tail.c)
+      - [Insert at the beginning](./2.linked%20list/3.circular%20linked%20list/CLL_insert_at_begin.c)
+      - [Insert at the end](./2.linked%20list/3.circular%20linked%20list/CLL_insert_at_end.c)
+      - [Insert at any position](./2.linked%20list/3.circular%20linked%20list/CLL_insert_at_anyPos.c)
   ---
 - ### Stacks
-  - [Implement stack using array](./stack/create_stack.c)
-  - [Implement stack using linked list](./stack/create_stack2.c)
+  - [Implement stack using array](./3.stack/create_stack.c)
+  - [Implement stack using linked list](./3.stack/create_stack2.c)
