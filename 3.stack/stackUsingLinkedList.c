@@ -89,10 +89,10 @@ void display()
 int main()
 {
     int choice, flag=1;
+    printf("\n\n\t\tStack");
     while(flag)
     {
-        printf("\n\n\t\tStack\n");
-        printf("\nMenu:\n1.push\n2.pop\n3.peek\n4.display\n5.Exit\n");
+        printf("\n\nMenu:\n1.push\n2.pop\n3.peek\n4.display\n5.Exit\n");
         printf("\nEnter your choice: ");
         scanf("%d", &choice);
         

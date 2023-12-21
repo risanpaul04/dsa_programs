@@ -1,7 +1,7 @@
 #include<stdio.h>
 #define Max 100
 
-void array_concatination(int s1, int s2,int a1[s1], int a2[s2], int res[s1+s2]){
+void array_concatination(int s1, int s2,int a1[], int a2[], int res[s1+s2]){
     int i, index = 0;
     for(i=0; i<s1; i++){
         res[index] = a1[i];

@@ -23,6 +23,7 @@ int main(){
     //insertion algo
     if(pos<=0 || pos>size+1){
         printf("Invalid position! Insertion not possible!");
+        return 0;
     }
     else{
         for(i=size-1; i>=pos-1; i--){
